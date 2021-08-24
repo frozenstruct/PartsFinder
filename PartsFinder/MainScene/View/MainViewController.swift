@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MainViewControllerInputProtocol {
+protocol MainViewControllerInputProtocol: AnyObject {
 
 	var interactor: MainInteractorInputProtocol? { get set }
 }

@@ -7,7 +7,12 @@
 
 import Foundation
 
-final class DecimalSplitter {
+protocol DecimalSplitterProtocol {
+
+	func divideIntoParts(_ input: Double) -> (Double, Double)
+}
+
+final class DecimalSplitter: DecimalSplitterProtocol {
 
 	func divideIntoParts(_ input: Double) -> (Double, Double) {
 		let randomUpperBound = Double.random(in: 0.4...0.5)

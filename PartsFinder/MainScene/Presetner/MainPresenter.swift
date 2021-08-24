@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol MainPresenterInputProtocol {
+protocol MainPresenterInputProtocol: AnyObject {
 
 	var viewController: MainViewControllerInputProtocol? { get set }
 }
@@ -16,13 +16,7 @@ final class MainPresenter: MainPresenterInputProtocol {
 
 	// MARK: - Properties
 
-	var viewController: MainViewControllerInputProtocol?
-
-	// MARK: - Initialization
-
-	init(<#parameters#>) {
-		<#statements#>
-	}
+	weak var viewController: MainViewControllerInputProtocol?
 
 	// MARK: - Methods
 }

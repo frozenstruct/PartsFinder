@@ -11,20 +11,24 @@ final class MainSceneAssembler {
 
 	// MARK: - Properties
 
-	var viewController: MainViewControllerInputProtocol
-	var interactor: MainInteractorInputProtocol
-	var presenter: MainPresenterInputProtocol
+	private var viewController: MainViewControllerInputProtocol
+	private var interactor: MainInteractorInputProtocol
+	private var presenter: MainPresenterInputProtocol
+
+	private var dependencies: MainSceneDependencyContainer
 
 	// MARK: - Initialization
 
 	init(
 		_ view: MainViewControllerInputProtocol,
 		_ interactor: MainInteractorInputProtocol,
-		_ presenter: MainPresenterInputProtocol
+		_ presenter: MainPresenterInputProtocol,
+		_ dependencies: MainSceneDependencyContainer
 	) {
 		self.viewController = view
 		self.interactor = interactor
 		self.presenter = presenter
+		self.dependencies = dependencies
 	}
 
 	// MARK: - Methods

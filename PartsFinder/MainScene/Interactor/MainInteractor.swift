@@ -7,13 +7,29 @@
 
 import Foundation
 
-protocol MainInteractorInputProtocol {
+protocol MainInteractorInputProtocol: AnyObject {
 
 	var presenter: MainPresenterInputProtocol? { get set }
 }
 
 final class MainInteractor: MainInteractorInputProtocol {
 
+	// MARK: - Properties
+
 	var presenter: MainPresenterInputProtocol?
+
+	var decimalSplitter: DecimalSplitterProtocol
+
+	// MARK: - Initialization
+
+	init(decimalSplitter: DecimalSplitterProtocol) {
+		self.decimalSplitter = decimalSplitter
+	}
+
+	// MARK: - Methods
+
+	func doSomething() {
+
+	}
 
 }
