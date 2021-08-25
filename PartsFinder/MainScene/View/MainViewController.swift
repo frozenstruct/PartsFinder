@@ -8,14 +8,18 @@
 import UIKit
 
 protocol MainViewControllerInputProtocol: AnyObject {
-
+	
 	var interactor: MainInteractorInputProtocol? { get set }
+	
+	func displayResult(_ num: SplitResultEntity)
 }
 
 class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	
+	// MARK: - VIP
+	
 	var interactor: MainInteractorInputProtocol?
-
+	
 	// MARK: - Utility
 	
 	struct DimensionalConstants {
@@ -70,6 +74,11 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		button.setTitle("SPLIT", for: .normal)
 		button.setTitleColor(.systemBlue, for: .normal)
 		button.titleLabel?.sizeToFit()
+		button.addTarget(
+			self,
+			action: #selector(sendNumberForSplit),
+			for: .touchUpInside
+		)
 		return button
 	}()
 	
@@ -155,11 +164,21 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 			outputLabel.topAnchor.constraint(equalTo: processButton.bottomAnchor, constant: 40)
 		])
 	}
-
+	
 	// MARK: - Methods
-
-	func sendNumberForSplit() {
-		interactor.
+	
+	@objc func sendNumberForSplit() {
+		guard let text = inputTextField.text,
+			  let num = Double(text)
+		else {
+			return
+		}
+		
+		interactor?.split(num)
+	}
+	
+	func displayResult(_ num: SplitResultEntity) {
+		outputLabel.text = "\(num.firstPart)," + " \(num.secondPart)"
 	}
 	
 }
@@ -167,7 +186,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 // MARK: - UITextFieldDelegate Conformance
 
 extension MainViewController: UITextFieldDelegate {
-
+	
 	func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 		let stringInput = NSString(
 			string: textField.text ?? ""
@@ -175,10 +194,17 @@ extension MainViewController: UITextFieldDelegate {
 			in: range,
 			with: string
 		)
-
+		
 		guard !stringInput.isEmpty
 		else { return true }
-
+		
 		return NumberFormatter().number(from: stringInput)?.intValue != nil
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		sendNumberForSplit()
+		
+		return true
 	}
 }

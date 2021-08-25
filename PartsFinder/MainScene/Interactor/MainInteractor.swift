@@ -8,35 +8,36 @@
 import Foundation
 
 protocol MainInteractorInputProtocol: AnyObject {
-
+	
 	var presenter: MainPresenterInputProtocol? { get set }
+	
+	func split(_ num: Double)
 }
 
 final class MainInteractor: MainInteractorInputProtocol {
-
+	
 	// MARK: - Properties
-
+	
 	var presenter: MainPresenterInputProtocol?
-
+	
 	var decimalSplitter: DecimalSplitterProtocol
-
+	
 	// MARK: - Initialization
-
+	
 	init(decimalSplitter: DecimalSplitterProtocol) {
 		self.decimalSplitter = decimalSplitter
 	}
-
+	
 	// MARK: - Methods
-
-	func split(_ num: Double) -> SplitResultEntity {
+	
+	func split(_ num: Double) {
 		let splitResult = decimalSplitter.split(num)
 		let output = SplitResultEntity(
 			firstPart: splitResult.part0,
 			secondPart: splitResult.part1
 		)
-		return output
+		
+		presenter?.displayResult(output)
 	}
-
 	
-
 }

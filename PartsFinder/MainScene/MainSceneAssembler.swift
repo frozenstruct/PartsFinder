@@ -11,29 +11,25 @@ final class MainSceneAssembler {
 
 	// MARK: - Properties
 
-	private var viewController: MainViewControllerInputProtocol
-	private var interactor: MainInteractorInputProtocol
-	private var presenter: MainPresenterInputProtocol
-
 	private var dependencies: MainSceneDependencyContainer
 
 	// MARK: - Initialization
 
 	init(
-		_ view: MainViewControllerInputProtocol,
-		_ interactor: MainInteractorInputProtocol,
-		_ presenter: MainPresenterInputProtocol,
 		_ dependencies: MainSceneDependencyContainer
 	) {
-		self.viewController = view
-		self.interactor = interactor
-		self.presenter = presenter
 		self.dependencies = dependencies
 	}
 
 	// MARK: - Methods
 
-	func make() -> MainViewControllerInputProtocol {
+	func make() -> UIViewController {
+		let viewController = MainViewController()
+		let interactor = MainInteractor(
+			decimalSplitter: dependencies.decimalSplitterWorker
+		)
+		let presenter = MainPresenter()
+
 		viewController.interactor = interactor
 		interactor.presenter = presenter
 		presenter.viewController = viewController

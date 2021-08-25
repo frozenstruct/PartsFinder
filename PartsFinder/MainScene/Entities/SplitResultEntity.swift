@@ -8,7 +8,7 @@
 import Foundation
 
 struct SplitResultEntity {
-
+	
 	var firstPart: Double
 	var secondPart: Double
 }

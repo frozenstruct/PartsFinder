@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-
+	
 	var hasBottomInsets: Bool {
 		if #available(iOS 11.0, *) {
 			return safeAreaInsets.bottom > 0
@@ -16,7 +16,7 @@ extension UIView {
 			return false
 		}
 	}
-
+	
 	var safeTopAnchor: NSLayoutYAxisAnchor {
 		if #available(iOS 11.0, *) {
 			return safeAreaLayoutGuide.topAnchor
@@ -24,7 +24,7 @@ extension UIView {
 			return topAnchor
 		}
 	}
-
+	
 	var safeBottomAnchor: NSLayoutYAxisAnchor {
 		if #available(iOS 11.0, *) {
 			return safeAreaLayoutGuide.bottomAnchor
@@ -32,7 +32,7 @@ extension UIView {
 			return bottomAnchor
 		}
 	}
-
+	
 	var safeLeadingAnchor: NSLayoutXAxisAnchor {
 		if #available(iOS 11.0, *) {
 			return safeAreaLayoutGuide.leadingAnchor
@@ -40,7 +40,7 @@ extension UIView {
 			return leadingAnchor
 		}
 	}
-
+	
 	var safeTrailingAnchor: NSLayoutXAxisAnchor {
 		if #available(iOS 11.0, *) {
 			return safeAreaLayoutGuide.trailingAnchor
@@ -48,5 +48,5 @@ extension UIView {
 			return trailingAnchor
 		}
 	}
-
+	
 }
