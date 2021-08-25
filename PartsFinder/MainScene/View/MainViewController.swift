@@ -155,6 +155,12 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 			outputLabel.topAnchor.constraint(equalTo: processButton.bottomAnchor, constant: 40)
 		])
 	}
+
+	// MARK: - Methods
+
+	func sendNumberForSplit() {
+		interactor.
+	}
 	
 }
 

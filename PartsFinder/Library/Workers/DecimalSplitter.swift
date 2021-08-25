@@ -9,12 +9,12 @@ import Foundation
 
 protocol DecimalSplitterProtocol {
 
-	func divideIntoParts(_ input: Double) -> (Double, Double)
+	func split(_ input: Double) -> (part0: Double, part1: Double)
 }
 
 final class DecimalSplitter: DecimalSplitterProtocol {
 
-	func divideIntoParts(_ input: Double) -> (Double, Double) {
+	func split(_ input: Double) -> (part0: Double, part1: Double) {
 		let randomUpperBound = Double.random(in: 0.4...0.5)
 		let random = Double.random(in: 0...Double(input) * randomUpperBound)
 
