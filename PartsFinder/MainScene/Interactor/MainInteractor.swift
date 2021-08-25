@@ -31,13 +31,7 @@ final class MainInteractor: MainInteractorInputProtocol {
 	// MARK: - Methods
 	
 	func split(_ num: Double) {
-		let splitResult = decimalSplitter.split(num)
-		let output = SplitResultEntity(
-			firstPart: splitResult.part0,
-			secondPart: splitResult.part1
-		)
-		
-		presenter?.displayResult(output)
+		presenter?.displayResult(decimalSplitter.split(num))
 	}
 	
 }

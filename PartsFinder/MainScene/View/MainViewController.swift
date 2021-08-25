@@ -64,6 +64,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		let field = UITextField(frame: .zero)
 		field.borderStyle = .roundedRect
 		field.delegate = self
+		field.keyboardType = .numberPad
 		field.placeholder = "Enter the number here"
 		return field
 	}()
@@ -178,7 +179,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	}
 	
 	func displayResult(_ num: SplitResultEntity) {
-		outputLabel.text = "\(num.firstPart)," + " \(num.secondPart)"
+		outputLabel.text = "\(num.part0)," + " \(num.part1)"
 	}
 	
 }
