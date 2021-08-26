@@ -14,7 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	var window: UIWindow?
 	
 	// MARK: - Scene Lifecycle
-	
+
+	/// Main (root) scene is configured here
 	func scene(
 		_ scene: UIScene,
 		willConnectTo session: UISceneSession,
@@ -25,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let window = UIWindow(windowScene: windowScene)
 		let viewController = MainSceneAssembler(
 			MainSceneDependencyContainer(
-				decimalSplitterWorker: DecimalSplitter()
+				numbersWorker: NumbersWorker()
 			)
 		).make()
 		
@@ -34,25 +35,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		self.window = window
 	}
-	
-	func sceneDidDisconnect(_ scene: UIScene) {
-		
-	}
-	
-	func sceneDidBecomeActive(_ scene: UIScene) {
-		
-	}
-	
-	func sceneWillResignActive(_ scene: UIScene) {
-		
-	}
-	
-	func sceneWillEnterForeground(_ scene: UIScene) {
-		
-	}
-	
-	func sceneDidEnterBackground(_ scene: UIScene) {
-		
-	}
 }
-

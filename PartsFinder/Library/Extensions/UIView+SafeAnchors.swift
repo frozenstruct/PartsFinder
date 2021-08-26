@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-	
+
 	var hasBottomInsets: Bool {
 		if #available(iOS 11.0, *) {
 			return safeAreaInsets.bottom > 0

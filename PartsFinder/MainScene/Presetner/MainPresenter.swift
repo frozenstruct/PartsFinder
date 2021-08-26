@@ -7,13 +7,15 @@
 
 import Foundation
 
+/// Descibes the minimum required logic for presenter
 protocol MainPresenterInputProtocol: AnyObject {
 	
-	var viewController: MainViewControllerInputProtocol? { get set }
-	
-	func displayResult(_ num: SplitResultEntity)
+	/// Sends the splitted result to the view
+	/// - Parameter result: Tuple that contains splitted numbers
+	func displayResult(_ result: SplitResultEntity)
 }
 
+/// Presenter implementation to pass data to the view
 final class MainPresenter: MainPresenterInputProtocol {
 	
 	// MARK: - Properties

@@ -7,13 +7,15 @@
 
 import UIKit
 
+/// Describes base functionality of the ViewController, applicable for `VIP`
 protocol MainViewControllerInputProtocol: AnyObject {
-	
-	var interactor: MainInteractorInputProtocol? { get set }
-	
+
+	/// Takes the splitted digits and sends it to the view
+	/// - Parameter num: tuple, containing the splitted numbers
 	func displayResult(_ num: SplitResultEntity)
 }
 
+/// Holds and manages the visual representation of the cycle data
 class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	
 	// MARK: - VIP
@@ -21,7 +23,8 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	var interactor: MainInteractorInputProtocol?
 	
 	// MARK: - Utility
-	
+
+	/// Holds some magic numbers to facilitate constraints
 	struct DimensionalConstants {
 		
 		static var defaultButtonHeight: CGFloat = 30.0
@@ -30,7 +33,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	
 	// MARK: - UI Constituents
 	
-	/// Greeting Label
+	/// Greeting Label at the top of the screen
 	private lazy var greetingLabel: UILabel = {
 		let label = UILabel(frame: .zero)
 		label.text = "Random Split!"
@@ -69,7 +72,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		return field
 	}()
 	
-	/// The main button, that perform the action
+	/// The main button, that triggers the splitting
 	private lazy var processButton: UIButton = {
 		let button = UIButton(type: .roundedRect)
 		button.setTitle("SPLIT", for: .normal)
@@ -92,24 +95,13 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	}()
 	
 	
-	
-	// MARK: - Initialization
-	
-	init() {
-		super.init(nibName: nil, bundle: nil)
-	}
-	
-	required init?(coder: NSCoder) {
-		fatalError("init(coder:) has not been implemented")
-	}
-	
 	// MARK: - View Lifecycle
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		addSubviews()
-		constarinSubviews()
+		constrainSubviews()
 		
 		view.backgroundColor = .white
 	}
@@ -130,8 +122,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		})
 	}
 	
-	func constarinSubviews() {
-		
+	func constrainSubviews() {
 		NSLayoutConstraint.activate([
 			greetingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 			greetingLabel.topAnchor.constraint(equalTo: view.safeTopAnchor)
@@ -167,7 +158,8 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	}
 	
 	// MARK: - Methods
-	
+
+	/// Selector for action button
 	@objc func sendNumberForSplit() {
 		guard let text = inputTextField.text,
 			  let num = Double(text)
@@ -177,7 +169,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		
 		interactor?.split(num)
 	}
-	
+
 	func displayResult(_ num: SplitResultEntity) {
 		outputLabel.text = "\(num.part0)," + " \(num.part1)"
 	}

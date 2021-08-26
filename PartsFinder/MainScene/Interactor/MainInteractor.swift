@@ -7,24 +7,30 @@
 
 import Foundation
 
+/// Describes the basic behaviour required for interactor
 protocol MainInteractorInputProtocol: AnyObject {
-	
-	var presenter: MainPresenterInputProtocol? { get set }
-	
+
+	/// Splits the number in two parts
+	/// - Parameter num: Some arbitrary number to split
 	func split(_ num: Double)
 }
 
+/// Main Scene Interactor - does all the business for the scene
 final class MainInteractor: MainInteractorInputProtocol {
 	
 	// MARK: - Properties
-	
+
+	/// Presenter as per VIP
 	var presenter: MainPresenterInputProtocol?
-	
-	var decimalSplitter: DecimalSplitterProtocol
+
+	/// Worker that splits numbers
+	var decimalSplitter: NumbersWorkerProtocol
 	
 	// MARK: - Initialization
-	
-	init(decimalSplitter: DecimalSplitterProtocol) {
+
+	/// Instantiates the copy of the interactor
+	/// - Parameter decimalSplitter: Number worker
+	init(decimalSplitter: NumbersWorkerProtocol) {
 		self.decimalSplitter = decimalSplitter
 	}
 	

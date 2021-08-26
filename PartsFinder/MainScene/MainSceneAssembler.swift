@@ -2,11 +2,12 @@
 //  MainSceneAssembler.swift
 //  PartsFinder
 //
-//  Created by 19268356 on 24.08.2021.
+//  Created by Dmitry Aksyonov on 24.08.2021.
 //
 
 import UIKit
 
+/// Assembles the Scene
 final class MainSceneAssembler {
 
 	// MARK: - Properties
@@ -15,6 +16,8 @@ final class MainSceneAssembler {
 
 	// MARK: - Initialization
 
+	/// Instantiates the copy of the assembler
+	/// - Parameter dependencies: All dependencies that are to be injected
 	init(
 		_ dependencies: MainSceneDependencyContainer
 	) {
@@ -23,10 +26,11 @@ final class MainSceneAssembler {
 
 	// MARK: - Methods
 
+	/// Instantiates the main view controller and returns it
 	func make() -> UIViewController {
 		let viewController = MainViewController()
 		let interactor = MainInteractor(
-			decimalSplitter: dependencies.decimalSplitterWorker
+			decimalSplitter: dependencies.numbersWorker
 		)
 		let presenter = MainPresenter()
 
