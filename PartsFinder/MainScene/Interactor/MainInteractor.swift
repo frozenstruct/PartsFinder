@@ -2,36 +2,36 @@
 //  MainInteractor.swift
 //  PartsFinder
 //
-//  Created by 19268356 on 23.08.2021.
+//  Created by Dmitry Aksyonov on 23.08.2021.
 //
 
 import Foundation
 
 protocol MainInteractorInputProtocol: AnyObject {
-	
+
 	var presenter: MainPresenterInputProtocol? { get set }
-	
-	func split(_ num: Double)
+
+	func split(_ number: Double)
 }
 
 final class MainInteractor: MainInteractorInputProtocol {
-	
+
 	// MARK: - Properties
-	
+
 	var presenter: MainPresenterInputProtocol?
-	
-	var decimalSplitter: DecimalSplitterProtocol
-	
+
+	var decimalSplitter: NumberSplitterProtocol
+
 	// MARK: - Initialization
-	
-	init(decimalSplitter: DecimalSplitterProtocol) {
+
+	init(decimalSplitter: NumberSplitterProtocol) {
 		self.decimalSplitter = decimalSplitter
 	}
-	
+
 	// MARK: - Methods
-	
-	func split(_ num: Double) {
-		presenter?.displayResult(decimalSplitter.split(num))
+
+	func split(_ number: Double) {
+		presenter?.present(decimalSplitter.split(number))
 	}
-	
+
 }

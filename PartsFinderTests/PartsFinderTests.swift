@@ -2,7 +2,7 @@
 //  PartsFinderTests.swift
 //  PartsFinderTests
 //
-//  Created by 19268356 on 23.08.2021.
+//  Created by Dmitry Aksyonov on 23.08.2021.
 //
 
 import XCTest

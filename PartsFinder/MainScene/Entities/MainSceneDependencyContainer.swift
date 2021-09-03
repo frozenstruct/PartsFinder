@@ -2,15 +2,15 @@
 //  MainSceneDependencyContainer.swift
 //  PartsFinder
 //
-//  Created by 19268356 on 24.08.2021.
+//  Created by Dmitry Aksyonov on 24.08.2021.
 //
 
 protocol MainSceneDependencyProtocol {
-	
-	var decimalSplitterWorker: DecimalSplitterProtocol { get }
+
+	var decimalSplitterWorker: NumberSplitterProtocol { get }
 }
 
 struct MainSceneDependencyContainer: MainSceneDependencyProtocol {
-	
-	var decimalSplitterWorker: DecimalSplitterProtocol
+
+	var decimalSplitterWorker: NumberSplitterProtocol
 }

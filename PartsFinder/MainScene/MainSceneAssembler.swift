@@ -2,7 +2,7 @@
 //  MainSceneAssembler.swift
 //  PartsFinder
 //
-//  Created by 19268356 on 24.08.2021.
+//  Created by Dmitry Aksyonov on 24.08.2021.
 //
 
 import UIKit

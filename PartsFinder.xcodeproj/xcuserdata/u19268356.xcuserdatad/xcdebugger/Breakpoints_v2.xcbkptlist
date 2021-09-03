@@ -30,9 +30,9 @@
             filePath = "PartsFinder/MainScene/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "sendNumberForSplit()"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "split()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -64,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "displayResult(_:)"
+            landmarkName = "present(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,9 +78,9 @@
             filePath = "PartsFinder/MainScene/View/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "sendNumberForSplit()"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "split()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,9 +94,9 @@
             filePath = "PartsFinder/Library/Workers/DecimalSplitter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "roundNumbers(_:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "roundToDecimal(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
