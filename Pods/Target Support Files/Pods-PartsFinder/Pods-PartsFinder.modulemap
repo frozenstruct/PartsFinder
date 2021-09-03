@@ -1,0 +1,6 @@
+framework module Pods_PartsFinder {
+  umbrella header "Pods-PartsFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
