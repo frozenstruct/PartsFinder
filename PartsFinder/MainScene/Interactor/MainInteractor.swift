@@ -33,5 +33,4 @@ final class MainInteractor: MainInteractorInputProtocol {
 	func split(_ number: Double) {
 		presenter?.present(decimalSplitter.split(number))
 	}
-
 }

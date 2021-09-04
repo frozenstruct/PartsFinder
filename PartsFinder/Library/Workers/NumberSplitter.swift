@@ -23,10 +23,12 @@ final class NumberSplitter: NumberSplitterProtocol {
 		let randomNumberPart0 = Double.random(in: 0...maxRandomPart)
 		let randomNumberPart1 = number - randomNumberPart0
 
-		return round((
-			randomNumberPart0.decimalNumber,
-			randomNumberPart1.decimalNumber
-		))
+		return round(
+			(
+				randomNumberPart0.decimalNumber,
+				randomNumberPart1.decimalNumber
+			)
+		)
 	}
 
 	func round(_ numbers: SplitResult, to places: Int16 = 2) -> SplitResult {

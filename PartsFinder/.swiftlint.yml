@@ -1,38 +1,106 @@
 opt_in_rules:
-  - file_header
+- file_header
+- anyobject_protocol
+- attributes
+- closure_body_length
+- closure_end_indentation
+- closure_spacing
+- collection_alignment
+- conditional_returns_on_newline
+- contains_over_filter_count
+- contains_over_filter_is_empty
+- contains_over_first_not_nil
+- contains_over_range_nil_comparison
+- control_statement
+- convenience_type
+- empty_collection_literal
+- empty_count
+- empty_string
+- flatmap_over_map_reduce
+- force_unwrapping
+- identical_operands
+- implicitly_unwrapped_optional
+- let_var_whitespace
+- missing_docs
+- multiline_arguments
+- multiline_arguments_brackets
+- multiline_literal_brackets
+- multiline_parameters
+- multiline_parameters_brackets
+- nimble_operator
+- no_extension_access_modifier
+- no_grouping_extension
+- object_literal
+- operator_usage_whitespace
+- overridden_super_call
+- pattern_matching_keywords
+- prefer_nimble
+- prefer_zero_over_explicit_init
+- private_action
+- private_action
+- prohibited_interface_builder
+- protocol_property_accessors_order
+- reduce_boolean
+- reduce_into
+- redundant_discardable_let
+- redundant_nil_coalescing
+- vertical_whitespace_closing_braces
+- vertical_parameter_alignment_on_call
+- vertical_whitespace_between_cases
+- unused_import
+- unused_declaration
+- untyped_error_in_catch
+- unowned_variable_capture
+- unneeded_parentheses_in_closure_argument
+- unavailable_function
+- type_contents_order
+- trailing_closure
+- toggle_bool
+- syntactic_sugar
+- switch_case_on_newline
+- static_operator
+- sorted_imports
+- sorted_first_last
+- shorthand_operator
+- redundant_type_annotation
+
 included:
-  - IOSched
-  - IOschedTests
-  - IOschedUITests
+- IOSched
+- IOschedTests
+- IOschedUITests
+
 excluded:
-  - IOSched/Common/GeneratedAssets
+- IOSched/Common/GeneratedAssets
 
 force_cast: error # implicitly
 force_try:
-  severity: error # explicitly
+severity: error # explicitly
 line_length: 110
 function_body_length:
-  warning: 120
-  error: 400
+warning: 120
+error: 400
 type_body_length:
-  warning: 500
-  error: 1200
+warning: 500
+error: 1200
 file_length:
-  warning: 900
-  error: 1600
+warning: 900
+error: 1600
 type_name:
-  min_length: 3
-  max_length:
-    warning: 40
-    error: 50
+min_length: 3
+max_length:
+warning: 40
+error: 50
 identifier_name:
-  min_length: 3
-  excluded: # excluded via string array
-    - id
-    - URL
-    - url
-    - x
-    - y
-    - i
-    - j
+min_length: 3
+excluded: # excluded via string array
+- id
+- URL
+- url
+- x
+- y
+- i
+- j
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+closure_body_length:
+warning: 100
+error: 200

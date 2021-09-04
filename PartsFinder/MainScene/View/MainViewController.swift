@@ -155,7 +155,8 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
 	// MARK: - Methods
 
-	@objc func split() {
+	@objc
+	func split() {
 		guard let text = inputTextField.text,
 			  let number = Double(text)
 		else {
@@ -167,36 +168,5 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
 	func displayResult(_ numbers: SplitResult) {
 		outputLabel.text = "\(numbers.part0)," + " \(numbers.part1)"
-	}
-
-}
-
-// MARK: - UITextFieldDelegate Conformance
-
-extension MainViewController: UITextFieldDelegate {
-
-	func textField(
-		_ textField: UITextField,
-		shouldChangeCharactersIn range: NSRange,
-		replacementString string: String
-	) -> Bool {
-		let stringInput = NSString(
-			string: textField.text ?? ""
-		).replacingCharacters(
-			in: range,
-			with: string
-		)
-
-		guard !stringInput.isEmpty
-		else { return true }
-
-		return NumberFormatter().number(from: stringInput)?.intValue != nil
-	}
-
-	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		textField.resignFirstResponder()
-		split()
-
-		return true
 	}
 }

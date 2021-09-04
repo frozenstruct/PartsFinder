@@ -25,5 +25,4 @@ final class MainPresenter: MainPresenterInputProtocol {
 	func present(_ splitted: SplitResult) {
 		viewController?.displayResult(splitted)
 	}
-
 }

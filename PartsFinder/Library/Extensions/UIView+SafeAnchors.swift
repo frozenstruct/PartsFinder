@@ -48,5 +48,4 @@ extension UIView {
 			return trailingAnchor
 		}
 	}
-
 }
