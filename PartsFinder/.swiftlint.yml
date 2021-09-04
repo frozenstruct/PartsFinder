@@ -37,7 +37,6 @@ opt_in_rules:
 - prefer_nimble
 - prefer_zero_over_explicit_init
 - private_action
-- private_action
 - prohibited_interface_builder
 - protocol_property_accessors_order
 - reduce_boolean
@@ -74,24 +73,28 @@ excluded:
 
 force_cast: error # implicitly
 force_try:
-severity: error # explicitly
+ severity: error # explicitly
 line_length: 110
 function_body_length:
-warning: 120
-error: 400
+ warning: 120
+ error: 400
 type_body_length:
-warning: 500
-error: 1200
+ warning: 500
+ error: 1200
 file_length:
-warning: 900
-error: 1600
+ warning: 900
+ error: 1600
 type_name:
-min_length: 3
-max_length:
-warning: 40
-error: 50
+ min_length: 3
+ max_length:
+ warning: 40
+ error: 50
 identifier_name:
-min_length: 3
+ min_length: 3
+ closure_body_length:
+ warning: 100
+ error: 200
+
 excluded: # excluded via string array
 - id
 - URL
@@ -101,6 +104,3 @@ excluded: # excluded via string array
 - i
 - j
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
-closure_body_length:
-warning: 100
-error: 200

@@ -16,16 +16,11 @@ protocol MainViewControllerInputProtocol: AnyObject {
 
 class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
-	// MARK: - VIP
-
-	var interactor: MainInteractorInputProtocol?
-
 	// MARK: - Utility
 
-	struct DimensionalConstants {
-
-		static var defaultButtonHeight: CGFloat = 30.0
-		static var defaultButtonWidth: CGFloat = 75.0
+	enum DimensionalConstants {
+		static var buttonHeight: CGFloat = 30.0
+		static var buttonWidth: CGFloat = 75.0
 	}
 
 	// MARK: - UI Constituents
@@ -41,9 +36,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	/// Fancy background
 	private lazy var backdropImageView: UIImageView = {
 		let imageView = UIImageView(
-			image: UIImage(
-				named: "backdrop"
-			)
+			image: #imageLiteral(resourceName: "backdrop")
 		)
 		imageView.contentMode = .scaleAspectFit
 		imageView.alpha = 0.1
@@ -91,6 +84,10 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		return label
 	}()
 
+	// MARK: - Properties
+
+	var interactor: MainInteractorInputProtocol?
+
 	// MARK: - View Lifecycle
 
 	override func viewDidLoad() {
@@ -112,10 +109,10 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 			inputTextField,
 			processButton,
 			outputLabel
-		].forEach({
+		].forEach {
 			$0.translatesAutoresizingMaskIntoConstraints = false
 			view.addSubview($0)
-		})
+		}
 	}
 
 	func constrainSubviews() {
@@ -144,7 +141,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		NSLayoutConstraint.activate([
 			processButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 			processButton.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 40),
-			processButton.heightAnchor.constraint(equalToConstant: DimensionalConstants.defaultButtonHeight)
+			processButton.heightAnchor.constraint(equalToConstant: DimensionalConstants.buttonHeight)
 		])
 
 		NSLayoutConstraint.activate([
