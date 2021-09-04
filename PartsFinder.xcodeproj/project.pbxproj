@@ -146,11 +146,11 @@
 		0643CEE326D3B985000480BE /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
-				0643CF7626D3E9BF000480BE /* View */,
+				3F5F382E26E3E1D400452BAF /* Assembly */,
+				06434F1526D4CF9300CAAB7F /* Entities */,
 				0643CF7526D3E9B3000480BE /* Interactor */,
 				0643CF7726D3E9CA000480BE /* Presetner */,
-				06434F1526D4CF9300CAAB7F /* Entities */,
-				06434F0826D4CDAC00CAAB7F /* MainSceneAssembler.swift */,
+				0643CF7626D3E9BF000480BE /* View */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -247,6 +247,14 @@
 				069C608526D3AE2600C9ED79 /* Info.plist */,
 			);
 			path = PartsFinderUITests;
+			sourceTree = "<group>";
+		};
+		3F5F382E26E3E1D400452BAF /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				06434F0826D4CDAC00CAAB7F /* MainSceneAssembler.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		B3E9D99AB3A0152FA7894233 /* Frameworks */ = {

@@ -11,23 +11,34 @@ protocol NumberSplitterProtocol {
 
 	func split(_ number: Double) -> SplitResult
 
+	func getRandomParts(from number: Double) -> SplitResult
+
 	func round(_ numbers: SplitResult, to places: Int16) -> SplitResult
 }
 
 final class NumberSplitter: NumberSplitterProtocol {
 
 	func split(_ number: Double) -> SplitResult {
+		let randomNumberParts = getRandomParts(from: number)
+
+		return round(
+			(
+				randomNumberParts.part0,
+				randomNumberParts.part1
+			)
+		)
+	}
+
+	func getRandomParts(from number: Double) -> SplitResult {
 		let randomUpperBound = Double.random(in: 0.4...0.5)
 		let maxRandomPart = Double(number) * randomUpperBound
 
 		let randomNumberPart0 = Double.random(in: 0...maxRandomPart)
 		let randomNumberPart1 = number - randomNumberPart0
 
-		return round(
-			(
-				randomNumberPart0.decimalNumber,
-				randomNumberPart1.decimalNumber
-			)
+		return (
+			randomNumberPart0.decimalNumber,
+			randomNumberPart1.decimalNumber
 		)
 	}
 
