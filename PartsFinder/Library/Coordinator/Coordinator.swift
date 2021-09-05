@@ -7,36 +7,52 @@
 
 import UIKit
 
-final class MainCoordinator: AppCoordinatorProtocol {
+protocol AppCoordinatorProtocol {
+
+	var navigationController: UINavigationController? { get set }
+
+	var assemblers: AssemblersContainer? { get set }
+
+	func start() -> UIViewController
+}
+
+final class Coordinator: AppCoordinatorProtocol {
 
 	enum EndpointKind: String {
 		case main
 	}
 
-	var assemblers: AssemblersContainer
-	var navigationController: UINavigationController
+	static var shared = Coordinator()
 
-	init(
-		navigationController: UINavigationController,
-		assemblers: AssemblersContainer
-	) {
-		self.navigationController = navigationController
-		self.assemblers = assemblers
+	var assemblers: AssemblersContainer?
+	var navigationController: UINavigationController?
+
+	private init() { }
+
+	func setup(with context: AppCoordinatorContext) {
+		assemblers = context.assemblers
+		navigationController = context.navigationController
 	}
 
 	func start() -> UIViewController {
-		let viewController = assemblers.initialSceneAssembler.make()
+		guard let viewController = assemblers?.initialSceneAssembler.make(),
+			  let navigationController = navigationController else {
+			return UIViewController()
+		}
 		navigationController.setViewControllers(
 			[viewController],
 			animated: UIView.areAnimationsEnabled
 		)
-		navigationController.setNavigationBarHidden(true, animated: false)
+		navigationController.setNavigationBarHidden(
+			true,
+			animated: false
+		)
 		return navigationController
 	}
 
 	func route(to endpoint: EndpointKind) {
 		let viewController = makeDestination(from: endpoint)
-		navigationController.pushViewController(
+		navigationController?.pushViewController(
 			viewController,
 			animated: UIView.areAnimationsEnabled
 		)

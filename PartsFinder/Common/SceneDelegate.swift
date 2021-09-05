@@ -35,10 +35,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			)
 		)
 
-		let viewController = MainCoordinator(
-			navigationController: UINavigationController(),
-			assemblers: assemblers
-		).start()
+		let context = AppCoordinatorContext(
+			assemblers: assemblers,
+			navigationController: UINavigationController()
+		)
+
+		let coordinator = Coordinator.shared
+		coordinator.setup(with: context)
+
+		let viewController = coordinator.start()
 
 		window.rootViewController = viewController
 		window.makeKeyAndVisible()

@@ -7,5 +7,9 @@
 
 import UIKit
 
-extension UIViewController {
+extension UIViewController: Presentable {
+
+	var toPresent: UIViewController? {
+		return self
+	}
 }

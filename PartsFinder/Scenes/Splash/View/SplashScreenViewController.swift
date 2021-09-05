@@ -11,8 +11,6 @@ final class SplashScreenViewController: UIViewController {
 
 	// MARK: - Properties
 
-	weak var coordinator: MainCoordinator?
-
 	private lazy var appNameLabel: UILabel = {
 		let label = UILabel(frame: .zero)
 		label.font = UIFont.init(name: "NexaBold", size: 30)
@@ -53,7 +51,7 @@ final class SplashScreenViewController: UIViewController {
 
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
-		presentMainScene()
+		perform(#selector(presentMainScene), with: nil, afterDelay: 2.0)
 	}
 
 	// MARK: - Methods
@@ -96,18 +94,8 @@ final class SplashScreenViewController: UIViewController {
 		self.view.layer.insertSublayer(layer, at: 0)
 	}
 
+	@objc
 	private func presentMainScene() {
-		let viewController = MainSceneAssembler(
-			MainSceneDependencyContainer(
-				numberSplitter: NumberSplitter()
-			)
-		).make()
-
-		viewController.modalTransitionStyle = .crossDissolve
-		viewController.modalPresentationStyle = .fullScreen
-
-		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-			self.present(viewController, animated: true, completion: nil)
-		}
+		Coordinator.shared.route(to: .main)
 	}
 }
