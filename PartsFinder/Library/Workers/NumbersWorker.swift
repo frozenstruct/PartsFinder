@@ -28,7 +28,7 @@ protocol NumbersWorkerProtocol {
 
 /// Performs splitting computations on numbers
 final class NumbersWorker: NumbersWorkerProtocol {
-	
+
 	func split(_ input: Double) -> SplitResultEntity {
 		let randomUpperBound = Double.random(in: 0.4...0.5)
 		let random = Double.random(in: 0...Double(input) * randomUpperBound)

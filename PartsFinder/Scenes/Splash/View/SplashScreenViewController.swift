@@ -11,12 +11,14 @@ final class SplashScreenViewController: UIViewController {
 
 	// MARK: - Properties
 
+	weak var coordinator: MainCoordinator?
+
 	private lazy var appNameLabel: UILabel = {
 		let label = UILabel(frame: .zero)
 		label.font = UIFont.init(name: "NexaBold", size: 30)
 		label.text = "Parts Finder".uppercased()
 		label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-		label.alpha = 0.5
+		label.alpha = 0.7
 		return label
 	}()
 
@@ -97,14 +99,14 @@ final class SplashScreenViewController: UIViewController {
 	private func presentMainScene() {
 		let viewController = MainSceneAssembler(
 			MainSceneDependencyContainer(
-				decimalSplitterWorker: NumberSplitter()
+				numberSplitter: NumberSplitter()
 			)
 		).make()
 
 		viewController.modalTransitionStyle = .crossDissolve
 		viewController.modalPresentationStyle = .fullScreen
 
-		DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 			self.present(viewController, animated: true, completion: nil)
 		}
 	}

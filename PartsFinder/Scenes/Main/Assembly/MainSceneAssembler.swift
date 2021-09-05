@@ -8,7 +8,7 @@
 import UIKit
 
 /// Assembles the Scene
-final class MainSceneAssembler {
+final class MainSceneAssembler: AssemblyLogic {
 
 	// MARK: - Properties
 
@@ -30,7 +30,7 @@ final class MainSceneAssembler {
 	func make() -> UIViewController {
 		let viewController = MainViewController()
 		let interactor = MainInteractor(
-			decimalSplitter: dependencies.numbersWorker
+			decimalSplitter: dependencies.numberSplitter
 		)
 		let presenter = MainPresenter()
 

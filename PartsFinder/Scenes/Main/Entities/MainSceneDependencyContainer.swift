@@ -7,10 +7,10 @@
 
 protocol MainSceneDependencyProtocol {
 
-	var decimalSplitterWorker: NumberSplitterProtocol { get }
+	var numberSplitter: NumberSplitterProtocol { get }
 }
 
 struct MainSceneDependencyContainer: MainSceneDependencyProtocol {
 
-	var decimalSplitterWorker: NumberSplitterProtocol
+	var numberSplitter: NumberSplitterProtocol
 }
