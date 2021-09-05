@@ -24,6 +24,10 @@
 		06A4446E26E23F84005052AE /* Double+NSDecimalNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4446D26E23F84005052AE /* Double+NSDecimalNumber.swift */; };
 		140B63AC7A884969D294128B /* Pods_PartsFinder_PartsFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADB8C60135C8DF68B6184A4 /* Pods_PartsFinder_PartsFinderUITests.framework */; };
 		3F59B53026E38A6200DE992A /* MainViewController+UITextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F59B52F26E38A6200DE992A /* MainViewController+UITextFieldDelegate.swift */; };
+		3F844CE026E4F0A100208FC6 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CDF26E4F0A100208FC6 /* SplashScreenViewController.swift */; };
+		3F844CE826E4FDE600208FC6 /* nexaLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F844CE526E4FD8300208FC6 /* nexaLight.otf */; };
+		3F844CE926E4FDE600208FC6 /* nexaBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F844CE426E4FD8300208FC6 /* nexaBold.otf */; };
+		3F844CEB26E4FEF100208FC6 /* UIFont+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CEA26E4FEF100208FC6 /* UIFont+Names.swift */; };
 		4F3189235107E3D1F2E51BD7 /* Pods_PartsFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39051AB0783DBF5DDCB607 /* Pods_PartsFinder.framework */; };
 		8563867A6D8091E95993BADE /* Pods_PartsFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C4510E5933004C1A0BB536 /* Pods_PartsFinderTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,10 @@
 		06A4446D26E23F84005052AE /* Double+NSDecimalNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+NSDecimalNumber.swift"; sourceTree = "<group>"; };
 		1342FDBD35A9144EE41E3D68 /* Pods-PartsFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinderTests.debug.xcconfig"; path = "Target Support Files/Pods-PartsFinderTests/Pods-PartsFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F59B52F26E38A6200DE992A /* MainViewController+UITextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UITextFieldDelegate.swift"; sourceTree = "<group>"; };
+		3F844CDF26E4F0A100208FC6 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		3F844CE426E4FD8300208FC6 /* nexaBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nexaBold.otf; sourceTree = "<group>"; };
+		3F844CE526E4FD8300208FC6 /* nexaLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nexaLight.otf; sourceTree = "<group>"; };
+		3F844CEA26E4FEF100208FC6 /* UIFont+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Names.swift"; sourceTree = "<group>"; };
 		7410AE2D547C7E36C3AD8DEC /* Pods-PartsFinder-PartsFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder-PartsFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PartsFinder-PartsFinderUITests/Pods-PartsFinder-PartsFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8074B73EB565CC9585B4C2D7 /* Pods-PartsFinder-PartsFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder-PartsFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartsFinder-PartsFinderUITests/Pods-PartsFinder-PartsFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9276A06F0652405E9C8439DF /* Pods-PartsFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder.release.xcconfig"; path = "Target Support Files/Pods-PartsFinder/Pods-PartsFinder.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 		0643CEDE26D3B970000480BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3F844CE226E4FD7000208FC6 /* Fonts */,
 				069C606A26D3AE2600C9ED79 /* Assets.xcassets */,
 				069C606C26D3AE2600C9ED79 /* LaunchScreen.storyboard */,
 				069C606F26D3AE2600C9ED79 /* Info.plist */,
@@ -160,6 +169,7 @@
 			children = (
 				06434F1926D4CFF700CAAB7F /* Workers */,
 				0643CEEB26D3B9EC000480BE /* Extensions */,
+				3F844CE126E4F0A500208FC6 /* Views */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -167,8 +177,9 @@
 		0643CEEB26D3B9EC000480BE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0643CEEC26D3B9FB000480BE /* UIView+SafeAnchors.swift */,
 				06A4446D26E23F84005052AE /* Double+NSDecimalNumber.swift */,
+				3F844CEA26E4FEF100208FC6 /* UIFont+Names.swift */,
+				0643CEEC26D3B9FB000480BE /* UIView+SafeAnchors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +266,31 @@
 				06434F0826D4CDAC00CAAB7F /* MainSceneAssembler.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		3F844CE126E4F0A500208FC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CDF26E4F0A100208FC6 /* SplashScreenViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F844CE226E4FD7000208FC6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CE326E4FD8300208FC6 /* Nexa */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F844CE326E4FD8300208FC6 /* Nexa */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CE426E4FD8300208FC6 /* nexaBold.otf */,
+				3F844CE526E4FD8300208FC6 /* nexaLight.otf */,
+			);
+			path = Nexa;
 			sourceTree = "<group>";
 		};
 		B3E9D99AB3A0152FA7894233 /* Frameworks */ = {
@@ -388,7 +424,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				069C606E26D3AE2600C9ED79 /* LaunchScreen.storyboard in Resources */,
+				3F844CE926E4FDE600208FC6 /* nexaBold.otf in Resources */,
 				069C606B26D3AE2600C9ED79 /* Assets.xcassets in Resources */,
+				3F844CE826E4FDE600208FC6 /* nexaLight.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,11 +541,13 @@
 				06434F2026D4D90A00CAAB7F /* MainSceneDependencyContainer.swift in Sources */,
 				06434F0926D4CDAC00CAAB7F /* MainSceneAssembler.swift in Sources */,
 				06A4446E26E23F84005052AE /* Double+NSDecimalNumber.swift in Sources */,
+				3F844CE026E4F0A100208FC6 /* SplashScreenViewController.swift in Sources */,
 				0643CEED26D3B9FB000480BE /* UIView+SafeAnchors.swift in Sources */,
 				3F59B53026E38A6200DE992A /* MainViewController+UITextFieldDelegate.swift in Sources */,
 				06434F1126D4CF6800CAAB7F /* SplitResult.swift in Sources */,
 				06434F0326D4CD3800CAAB7F /* MainPresenter.swift in Sources */,
 				069C606626D3AE2400C9ED79 /* MainViewController.swift in Sources */,
+				3F844CEB26E4FEF100208FC6 /* UIFont+Names.swift in Sources */,
 				069C606226D3AE2400C9ED79 /* AppDelegate.swift in Sources */,
 				06434F1B26D4D00200CAAB7F /* NumberSplitter.swift in Sources */,
 				0643CF7F26D3EBEC000480BE /* MainInteractor.swift in Sources */,
@@ -681,7 +721,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CX6B9Z4HL3;
+				DEVELOPMENT_TEAM = FH9R39U9P3;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -691,7 +731,7 @@
 					"@executable_path/Frameworks",
 				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wcgbinternal.PartsFinder;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wcgbinternal.partsfinder-inhouse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;
@@ -707,7 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CX6B9Z4HL3;
+				DEVELOPMENT_TEAM = FH9R39U9P3;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -717,7 +757,7 @@
 					"@executable_path/Frameworks",
 				);
 				LINKER_DISPLAYS_MANGLED_NAMES = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wcgbinternal.PartsFinder;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wcgbinternal.partsfinder-inhouse";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 5.0;

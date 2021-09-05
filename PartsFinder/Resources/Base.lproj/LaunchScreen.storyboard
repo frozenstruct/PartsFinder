@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,26 +15,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-oW-UeJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="5Fy-oW-UeJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARTS FINDER ALPHA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-WT-uh1">
-                                <rect key="frame" x="120" y="92" width="174" height="40.5"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eyedropping, 2021" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-cJ-0yn">
+                                <rect key="frame" x="150.5" y="846" width="113" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Fy-oW-UeJ" secondAttribute="trailing" id="8Zo-Kb-ing"/>
-                            <constraint firstItem="PmH-WT-uh1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Qzq-vy-ciJ"/>
-                            <constraint firstItem="5Fy-oW-UeJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YEb-pj-ljS"/>
-                            <constraint firstItem="5Fy-oW-UeJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hCf-tX-4Qs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PmH-WT-uh1" secondAttribute="trailing" constant="120" id="jDF-dH-8Gx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Fy-oW-UeJ" secondAttribute="bottom" id="kGT-e8-roU"/>
-                            <constraint firstItem="PmH-WT-uh1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="48" id="odf-Ic-IIJ"/>
+                            <constraint firstAttribute="trailing" secondItem="5Fy-oW-UeJ" secondAttribute="trailing" id="8Zo-Kb-ing"/>
+                            <constraint firstItem="kJI-cJ-0yn" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottomMargin" id="Mf0-F0-pnR"/>
+                            <constraint firstItem="kJI-cJ-0yn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NHo-dw-37B"/>
+                            <constraint firstItem="5Fy-oW-UeJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="YEb-pj-ljS"/>
+                            <constraint firstItem="5Fy-oW-UeJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="hCf-tX-4Qs"/>
+                            <constraint firstAttribute="bottom" secondItem="5Fy-oW-UeJ" secondAttribute="bottom" id="kGT-e8-roU"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,7 +42,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launchscreen" width="1442" height="1416"/>
+        <image name="LaunchScreenGradient" width="1116" height="1600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

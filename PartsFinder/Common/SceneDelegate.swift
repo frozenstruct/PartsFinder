@@ -25,13 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		}
 
 		let window = UIWindow(windowScene: windowScene)
-		let viewController = MainSceneAssembler(
-			MainSceneDependencyContainer(
-				decimalSplitterWorker: NumberSplitter()
-			)
-		).make()
+		let splashViewController = SplashScreenViewController()
 
-		window.rootViewController = viewController
+		window.rootViewController = splashViewController
 		window.makeKeyAndVisible()
 
 		self.window = window
