@@ -7,8 +7,13 @@
 
 import Foundation
 
+/// Convenience container for holding app's assemblers
+/// Made mostly for convenience purposes and `less of code`
 struct AssemblersContainer {
 
+	/// Initial application assembler that usually presents launchscreen or something
 	let initialSceneAssembler: AssemblyLogic
+
+	/// Main scene assembler
 	let mainSceneAssembler: AssemblyLogic
 }

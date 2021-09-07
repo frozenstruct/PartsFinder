@@ -7,4 +7,5 @@
 
 import Foundation
 
+/// `NSDecimalNumber` tuple containing double-precision numbers
 typealias SplitResult = (part0: NSDecimalNumber, part1: NSDecimalNumber)

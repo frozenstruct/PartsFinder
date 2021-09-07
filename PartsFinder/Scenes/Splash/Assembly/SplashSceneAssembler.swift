@@ -7,8 +7,10 @@
 
 import UIKit
 
+/// Assembles the scene with the splash screen
 final class SplashSceneAssembler: AssemblyLogic {
 
+	/// Make function imp
 	func make() -> UIViewController {
 		let viewController = SplashScreenViewController()
 		return viewController

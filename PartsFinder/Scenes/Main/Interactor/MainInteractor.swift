@@ -7,30 +7,40 @@
 
 import Foundation
 
+/// A type that implements the business logic of the maiun scene
 protocol MainInteractorInputProtocol: AnyObject {
 
+	/// Interactor
 	var presenter: MainPresenterInputProtocol? { get set }
 
+	/// Splits the number in two unequal parts that are the terms of the input number
+	/// - Parameter number: Double precision number to be sent to splitting
 	func split(_ number: Double)
 }
 
+/// Implements main scene business logic
 final class MainInteractor: MainInteractorInputProtocol {
 
 	// MARK: - Properties
 
+	/// Presenter
 	var presenter: MainPresenterInputProtocol?
 
-	var decimalSplitter: NumberSplitterProtocol
+	/// Numbers worker
+	var numberSplitter: NumberSplitterLogic
 
 	// MARK: - Initialization
 
-	init(decimalSplitter: NumberSplitterProtocol) {
-		self.decimalSplitter = decimalSplitter
+	/// Instantiates the working copy of Interactor
+	/// - Parameter decimalSplitter: Worker to split numbers
+	init(decimalSplitter: NumberSplitterLogic) {
+		self.numberSplitter = decimalSplitter
 	}
 
 	// MARK: - Methods
 
+	/// Splits number as per protocol
 	func split(_ number: Double) {
-		presenter?.present(decimalSplitter.split(number))
+		presenter?.present(numberSplitter.split(number))
 	}
 }

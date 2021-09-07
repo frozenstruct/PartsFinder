@@ -7,17 +7,22 @@
 
 import UIKit
 
+/// A type that supports UI-related actions of the main scene
 protocol MainViewControllerInputProtocol: AnyObject {
 
+	/// Interactor to handle the scene business logic
 	var interactor: MainInteractorInputProtocol? { get set }
 
+	/// Tells the view controller to display the split result on the screen
+	/// - Parameter num: split result tuple to be displayed
 	func displayResult(_ num: SplitResult)
 }
 
 class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
-	// MARK: - Utility
+	// MARK: - Subtypes
 
+	/// Utility struct that holds the default dimensions for buttons
 	enum DimensionalConstants {
 		static var buttonHeight: CGFloat = 30.0
 		static var buttonWidth: CGFloat = 75.0
@@ -101,6 +106,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
 	// MARK: - UI Assembly
 
+	/// Adds views to the hierarchy
 	func addSubviews() {
 		[
 			titleLabel,
@@ -115,6 +121,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		}
 	}
 
+	/// Addds up constraints
 	func constrainSubviews() {
 		NSLayoutConstraint.activate([
 			titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -152,6 +159,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
 	// MARK: - Methods
 
+	/// Sends the number from user input to interactor for splitting
 	@objc
 	func split() {
 		guard let text = inputTextField.text,
@@ -163,6 +171,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 		interactor?.split(number)
 	}
 
+	/// Displays the result (imp)
 	func displayResult(_ numbers: SplitResult) {
 		outputLabel.text = "\(numbers.part0)," + " \(numbers.part1)"
 	}

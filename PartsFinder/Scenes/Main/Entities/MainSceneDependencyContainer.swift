@@ -5,12 +5,15 @@
 //  Created by Dmitry Aksyonov on 24.08.2021.
 //
 
+/// A type that holds all dependencies needed for main scene
 protocol MainSceneDependencyProtocol {
 
-	var numberSplitter: NumberSplitterProtocol { get }
+	/// Worker to split numbers
+	var numberSplitter: NumberSplitterLogic { get }
 }
 
+/// Protocol imp
 struct MainSceneDependencyContainer: MainSceneDependencyProtocol {
 
-	var numberSplitter: NumberSplitterProtocol
+	var numberSplitter: NumberSplitterLogic
 }

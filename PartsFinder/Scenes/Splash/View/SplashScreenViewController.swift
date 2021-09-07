@@ -7,10 +7,12 @@
 
 import UIKit
 
+/// Implements the splash screen UI
 final class SplashScreenViewController: UIViewController {
 
 	// MARK: - Properties
 
+	/// App title that is shown in the center of the screen
 	private lazy var appNameLabel: UILabel = {
 		let label = UILabel(frame: .zero)
 		label.font = UIFont.init(name: "NexaBold", size: 30)
@@ -20,6 +22,7 @@ final class SplashScreenViewController: UIViewController {
 		return label
 	}()
 
+	/// Little copyright statemen situated near the bottomt
 	private lazy var authorLabel: UILabel = {
 		let label = UILabel(
 			frame: CGRect(
@@ -36,6 +39,7 @@ final class SplashScreenViewController: UIViewController {
 		return label
 	}()
 
+	/// Gradient background
 	private var gradientLayer: CAGradientLayer?
 
 	// MARK: - View Lifecycle
@@ -56,6 +60,7 @@ final class SplashScreenViewController: UIViewController {
 
 	// MARK: - Methods
 
+	/// Adds subviews to the hierarchy
 	private func addSubviews() {
 		[
 			appNameLabel,
@@ -66,6 +71,7 @@ final class SplashScreenViewController: UIViewController {
 		}
 	}
 
+	/// Adds-up constaints
 	private func constrainSubviews() {
 		NSLayoutConstraint.activate([
 			appNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -78,6 +84,7 @@ final class SplashScreenViewController: UIViewController {
 		])
 	}
 
+	/// Sets up the gradient backdrop
 	private func createBackdropGradient() {
 		gradientLayer = CAGradientLayer()
 
@@ -94,6 +101,7 @@ final class SplashScreenViewController: UIViewController {
 		self.view.layer.insertSublayer(layer, at: 0)
 	}
 
+	/// Tells the coordinator to present the main scene
 	@objc
 	private func presentMainScene() {
 		Coordinator.shared.route(to: .main)

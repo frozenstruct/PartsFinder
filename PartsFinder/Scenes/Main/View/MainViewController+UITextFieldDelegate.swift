@@ -9,6 +9,7 @@ import UIKit
 
 // MARK: - UITextFieldDelegate Conformance
 
+/// Restricts the input of non-numeric characters
 extension MainViewController: UITextFieldDelegate {
 
 	func textField(
