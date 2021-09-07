@@ -25,9 +25,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		}
 
 		let window = UIWindow(windowScene: windowScene)
-		let splashViewController = SplashScreenViewController()
 
-		window.rootViewController = splashViewController
+		let assemblers = AssemblersContainer(
+			initialSceneAssembler: SplashSceneAssembler(),
+			mainSceneAssembler: MainSceneAssembler(
+				MainSceneDependencyContainer(
+					numberSplitter: NumberSplitter()
+				)
+			)
+		)
+
+		let context = AppCoordinatorContext(
+			assemblers: assemblers,
+			navigationController: UINavigationController()
+		)
+
+		let coordinator = Coordinator.shared
+		coordinator.setup(with: context)
+
+		let viewController = coordinator.start()
+
+		window.rootViewController = viewController
 		window.makeKeyAndVisible()
 
 		self.window = window

@@ -9,6 +9,8 @@ import UIKit
 
 extension UIFont {
 
+	/// Allows to peek all fonts available for application
+	/// - Note: Prodces output as a debug console log
 	func getFontsNames() {
 		for family: String in UIFont.familyNames {
 			print(family)

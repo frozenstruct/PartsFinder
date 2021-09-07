@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06196ADF26E60B46009D8026 /* AppCoordinatorContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06196ADE26E60B46009D8026 /* AppCoordinatorContext.swift */; };
 		06434F0326D4CD3800CAAB7F /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06434F0226D4CD3800CAAB7F /* MainPresenter.swift */; };
 		06434F0926D4CDAC00CAAB7F /* MainSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06434F0826D4CDAC00CAAB7F /* MainSceneAssembler.swift */; };
 		06434F1126D4CF6800CAAB7F /* SplitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06434F1026D4CF6800CAAB7F /* SplitResult.swift */; };
@@ -14,6 +15,8 @@
 		06434F2026D4D90A00CAAB7F /* MainSceneDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06434F1F26D4D90A00CAAB7F /* MainSceneDependencyContainer.swift */; };
 		0643CEED26D3B9FB000480BE /* UIView+SafeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0643CEEC26D3B9FB000480BE /* UIView+SafeAnchors.swift */; };
 		0643CF7F26D3EBEC000480BE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0643CF7E26D3EBEC000480BE /* MainInteractor.swift */; };
+		0666C20826E635E10097877A /* ApplicationCoordinatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666C20726E635E10097877A /* ApplicationCoordinatorLogic.swift */; };
+		0666C21126E640AB0097877A /* SplashSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0666C21026E640AB0097877A /* SplashSceneInteractor.swift */; };
 		069C606226D3AE2400C9ED79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069C606126D3AE2400C9ED79 /* AppDelegate.swift */; };
 		069C606426D3AE2400C9ED79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069C606326D3AE2400C9ED79 /* SceneDelegate.swift */; };
 		069C606626D3AE2400C9ED79 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069C606526D3AE2400C9ED79 /* MainViewController.swift */; };
@@ -28,6 +31,10 @@
 		3F844CE826E4FDE600208FC6 /* nexaLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F844CE526E4FD8300208FC6 /* nexaLight.otf */; };
 		3F844CE926E4FDE600208FC6 /* nexaBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F844CE426E4FD8300208FC6 /* nexaBold.otf */; };
 		3F844CEB26E4FEF100208FC6 /* UIFont+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CEA26E4FEF100208FC6 /* UIFont+Names.swift */; };
+		3F844CF326E52ED500208FC6 /* SplashSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CF226E52ED500208FC6 /* SplashSceneAssembler.swift */; };
+		3F844CFA26E5395300208FC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CF926E5395300208FC6 /* Coordinator.swift */; };
+		3F844CFD26E53F0000208FC6 /* AssemblyLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CFC26E53F0000208FC6 /* AssemblyLogic.swift */; };
+		3F844D0426E54E9500208FC6 /* AssemblersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844D0326E54E9500208FC6 /* AssemblersContainer.swift */; };
 		4F3189235107E3D1F2E51BD7 /* Pods_PartsFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39051AB0783DBF5DDCB607 /* Pods_PartsFinder.framework */; };
 		8563867A6D8091E95993BADE /* Pods_PartsFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C4510E5933004C1A0BB536 /* Pods_PartsFinderTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06196ADE26E60B46009D8026 /* AppCoordinatorContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorContext.swift; sourceTree = "<group>"; };
 		06434F0226D4CD3800CAAB7F /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		06434F0826D4CDAC00CAAB7F /* MainSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneAssembler.swift; sourceTree = "<group>"; };
 		06434F1026D4CF6800CAAB7F /* SplitResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitResult.swift; sourceTree = "<group>"; };
@@ -57,6 +65,8 @@
 		06434F1F26D4D90A00CAAB7F /* MainSceneDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDependencyContainer.swift; sourceTree = "<group>"; };
 		0643CEEC26D3B9FB000480BE /* UIView+SafeAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeAnchors.swift"; sourceTree = "<group>"; };
 		0643CF7E26D3EBEC000480BE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		0666C20726E635E10097877A /* ApplicationCoordinatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorLogic.swift; sourceTree = "<group>"; };
+		0666C21026E640AB0097877A /* SplashSceneInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSceneInteractor.swift; sourceTree = "<group>"; };
 		069C605E26D3AE2400C9ED79 /* PartsFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartsFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		069C606126D3AE2400C9ED79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		069C606326D3AE2400C9ED79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +87,10 @@
 		3F844CE426E4FD8300208FC6 /* nexaBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nexaBold.otf; sourceTree = "<group>"; };
 		3F844CE526E4FD8300208FC6 /* nexaLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = nexaLight.otf; sourceTree = "<group>"; };
 		3F844CEA26E4FEF100208FC6 /* UIFont+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Names.swift"; sourceTree = "<group>"; };
+		3F844CF226E52ED500208FC6 /* SplashSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSceneAssembler.swift; sourceTree = "<group>"; };
+		3F844CF926E5395300208FC6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3F844CFC26E53F0000208FC6 /* AssemblyLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyLogic.swift; sourceTree = "<group>"; };
+		3F844D0326E54E9500208FC6 /* AssemblersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblersContainer.swift; sourceTree = "<group>"; };
 		7410AE2D547C7E36C3AD8DEC /* Pods-PartsFinder-PartsFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder-PartsFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PartsFinder-PartsFinderUITests/Pods-PartsFinder-PartsFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8074B73EB565CC9585B4C2D7 /* Pods-PartsFinder-PartsFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder-PartsFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartsFinder-PartsFinderUITests/Pods-PartsFinder-PartsFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9276A06F0652405E9C8439DF /* Pods-PartsFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder.release.xcconfig"; path = "Target Support Files/Pods-PartsFinder/Pods-PartsFinder.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,24 +166,26 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		0643CEE326D3B985000480BE /* MainScene */ = {
+		0643CEE326D3B985000480BE /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				3F5F382E26E3E1D400452BAF /* Assembly */,
-				06434F1526D4CF9300CAAB7F /* Entities */,
+				0643CF7626D3E9BF000480BE /* View */,
 				0643CF7526D3E9B3000480BE /* Interactor */,
 				0643CF7726D3E9CA000480BE /* Presetner */,
-				0643CF7626D3E9BF000480BE /* View */,
+				06434F1526D4CF9300CAAB7F /* Entities */,
 			);
-			path = MainScene;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		0643CEEA26D3B9DF000480BE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3F844D0226E54E8200208FC6 /* Entities */,
+				3F844CFB26E53EEB00208FC6 /* Protocols */,
+				3F844CF826E5394700208FC6 /* Coordinator */,
 				06434F1926D4CFF700CAAB7F /* Workers */,
 				0643CEEB26D3B9EC000480BE /* Extensions */,
-				3F844CE126E4F0A500208FC6 /* Views */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -209,6 +225,14 @@
 			path = Presetner;
 			sourceTree = "<group>";
 		};
+		0666C20F26E640A20097877A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0666C21026E640AB0097877A /* SplashSceneInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		069C605526D3AE2400C9ED79 = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +260,7 @@
 			children = (
 				0643CEDF26D3B97C000480BE /* Common */,
 				0643CEEA26D3B9DF000480BE /* Library */,
-				0643CEE326D3B985000480BE /* MainScene */,
+				3F844CED26E52DD200208FC6 /* Scenes */,
 				0643CEDE26D3B970000480BE /* Resources */,
 			);
 			path = PartsFinder;
@@ -268,12 +292,12 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
-		3F844CE126E4F0A500208FC6 /* Views */ = {
+		3F844CE126E4F0A500208FC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3F844CDF26E4F0A100208FC6 /* SplashScreenViewController.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		3F844CE226E4FD7000208FC6 /* Fonts */ = {
@@ -291,6 +315,59 @@
 				3F844CE526E4FD8300208FC6 /* nexaLight.otf */,
 			);
 			path = Nexa;
+			sourceTree = "<group>";
+		};
+		3F844CEC26E52DB900208FC6 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CF126E52DEC00208FC6 /* Assembly */,
+				3F844CE126E4F0A500208FC6 /* View */,
+				0666C20F26E640A20097877A /* Interactor */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3F844CED26E52DD200208FC6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CEC26E52DB900208FC6 /* Splash */,
+				0643CEE326D3B985000480BE /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3F844CF126E52DEC00208FC6 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CF226E52ED500208FC6 /* SplashSceneAssembler.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		3F844CF826E5394700208FC6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CF926E5395300208FC6 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3F844CFB26E53EEB00208FC6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3F844CFC26E53F0000208FC6 /* AssemblyLogic.swift */,
+				0666C20726E635E10097877A /* ApplicationCoordinatorLogic.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3F844D0226E54E8200208FC6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3F844D0326E54E9500208FC6 /* AssemblersContainer.swift */,
+				06196ADE26E60B46009D8026 /* AppCoordinatorContext.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		B3E9D99AB3A0152FA7894233 /* Frameworks */ = {
@@ -547,11 +624,18 @@
 				06434F1126D4CF6800CAAB7F /* SplitResult.swift in Sources */,
 				06434F0326D4CD3800CAAB7F /* MainPresenter.swift in Sources */,
 				069C606626D3AE2400C9ED79 /* MainViewController.swift in Sources */,
+				3F844CFD26E53F0000208FC6 /* AssemblyLogic.swift in Sources */,
+				06196ADF26E60B46009D8026 /* AppCoordinatorContext.swift in Sources */,
 				3F844CEB26E4FEF100208FC6 /* UIFont+Names.swift in Sources */,
+				3F844CFA26E5395300208FC6 /* Coordinator.swift in Sources */,
+				3F844D0426E54E9500208FC6 /* AssemblersContainer.swift in Sources */,
+				0666C20826E635E10097877A /* ApplicationCoordinatorLogic.swift in Sources */,
 				069C606226D3AE2400C9ED79 /* AppDelegate.swift in Sources */,
 				06434F1B26D4D00200CAAB7F /* NumberSplitter.swift in Sources */,
+				0666C21126E640AB0097877A /* SplashSceneInteractor.swift in Sources */,
 				0643CF7F26D3EBEC000480BE /* MainInteractor.swift in Sources */,
 				069C606426D3AE2400C9ED79 /* SceneDelegate.swift in Sources */,
+				3F844CF326E52ED500208FC6 /* SplashSceneAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

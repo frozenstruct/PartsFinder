@@ -7,17 +7,26 @@
 
 import Foundation
 
-protocol NumberSplitterProtocol {
+/// A type that is able to intake a number, split it into two random parts and return as a tuple
+protocol NumberSplitterLogic {
 
+	/// Splits the input number into two unequal parts and returns them as a tuple
+	/// - Returns: Split result tuple
 	func split(_ number: Double) -> SplitResult
 
+	/// Generates two random numbers from the input number, which are the terms of the input number
+	/// - Returns: Random parts tuple
 	func getRandomParts(from number: Double) -> SplitResult
 
+	/// Rounds the numbers in the input tuple to the specified number of decimal places
+	/// - Returns: Rounded numbers tuple
 	func round(_ numbers: SplitResult, to places: Int16) -> SplitResult
 }
 
-final class NumberSplitter: NumberSplitterProtocol {
+/// A type that implements `NumberSplitterLogic` protocol
+final class NumberSplitter: NumberSplitterLogic {
 
+	/// Splitting imp
 	func split(_ number: Double) -> SplitResult {
 		let randomNumberParts = getRandomParts(from: number)
 
@@ -29,6 +38,7 @@ final class NumberSplitter: NumberSplitterProtocol {
 		)
 	}
 
+	/// Randoming imp
 	func getRandomParts(from number: Double) -> SplitResult {
 		let randomUpperBound = Double.random(in: 0.4...0.5)
 		let maxRandomPart = Double(number) * randomUpperBound
@@ -42,6 +52,7 @@ final class NumberSplitter: NumberSplitterProtocol {
 		)
 	}
 
+	/// Rounding imp
 	func round(_ numbers: SplitResult, to places: Int16 = 2) -> SplitResult {
 		let roundingBehavior = NSDecimalNumberHandler(
 			roundingMode: .plain,
