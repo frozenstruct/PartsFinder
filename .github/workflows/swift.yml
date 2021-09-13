@@ -43,4 +43,4 @@ jobs:
           pod repo update
           pod install
       - name: Build
-        run: xcodebuild ARCHS=i386 ONLY_ACTIVE_ARCH=NO -configuration Debug -workspace PartsFinder.xcworkspace -scheme PartsFinder
+        run: xcodebuild ARCHS=$(ARCHS_STANDARD) ONLY_ACTIVE_ARCH=NO -configuration Debug -workspace PartsFinder.xcworkspace -scheme PartsFinder
