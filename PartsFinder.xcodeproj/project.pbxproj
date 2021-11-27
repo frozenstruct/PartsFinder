@@ -36,6 +36,9 @@
 		3F844CFA26E5395300208FC6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CF926E5395300208FC6 /* Coordinator.swift */; };
 		3F844CFD26E53F0000208FC6 /* AssemblyLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844CFC26E53F0000208FC6 /* AssemblyLogic.swift */; };
 		3F844D0426E54E9500208FC6 /* AssemblersContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F844D0326E54E9500208FC6 /* AssemblersContainer.swift */; };
+		3FC724D326ED584100F1BF0D /* DSNGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC724D226ED584100F1BF0D /* DSNGradient.swift */; };
+		3FC724D526ED588800F1BF0D /* DSNColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC724D426ED588800F1BF0D /* DSNColor.swift */; };
+		3FC724DB26EDFD3100F1BF0D /* SplashSceneViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC724DA26EDFD3100F1BF0D /* SplashSceneViewContext.swift */; };
 		4F3189235107E3D1F2E51BD7 /* Pods_PartsFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA39051AB0783DBF5DDCB607 /* Pods_PartsFinder.framework */; };
 		8563867A6D8091E95993BADE /* Pods_PartsFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C4510E5933004C1A0BB536 /* Pods_PartsFinderTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +96,9 @@
 		3F844CF926E5395300208FC6 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3F844CFC26E53F0000208FC6 /* AssemblyLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyLogic.swift; sourceTree = "<group>"; };
 		3F844D0326E54E9500208FC6 /* AssemblersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblersContainer.swift; sourceTree = "<group>"; };
+		3FC724D226ED584100F1BF0D /* DSNGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNGradient.swift; sourceTree = "<group>"; };
+		3FC724D426ED588800F1BF0D /* DSNColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSNColor.swift; sourceTree = "<group>"; };
+		3FC724DA26EDFD3100F1BF0D /* SplashSceneViewContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashSceneViewContext.swift; sourceTree = "<group>"; };
 		7410AE2D547C7E36C3AD8DEC /* Pods-PartsFinder-PartsFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder-PartsFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-PartsFinder-PartsFinderUITests/Pods-PartsFinder-PartsFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8074B73EB565CC9585B4C2D7 /* Pods-PartsFinder-PartsFinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder-PartsFinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PartsFinder-PartsFinderUITests/Pods-PartsFinder-PartsFinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9276A06F0652405E9C8439DF /* Pods-PartsFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartsFinder.release.xcconfig"; path = "Target Support Files/Pods-PartsFinder/Pods-PartsFinder.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +190,7 @@
 		0643CEEA26D3B9DF000480BE /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				3FC724D126ED582E00F1BF0D /* Design */,
 				3F844D0226E54E8200208FC6 /* Entities */,
 				3F844CFB26E53EEB00208FC6 /* Protocols */,
 				3F844CF826E5394700208FC6 /* Coordinator */,
@@ -299,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				3F844CDF26E4F0A100208FC6 /* SplashScreenViewController.swift */,
+				3FC724DA26EDFD3100F1BF0D /* SplashSceneViewContext.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,6 +379,15 @@
 				06196ADE26E60B46009D8026 /* AppCoordinatorContext.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		3FC724D126ED582E00F1BF0D /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				3FC724D226ED584100F1BF0D /* DSNGradient.swift */,
+				3FC724D426ED588800F1BF0D /* DSNColor.swift */,
+			);
+			path = Design;
 			sourceTree = "<group>";
 		};
 		B3E9D99AB3A0152FA7894233 /* Frameworks */ = {
@@ -623,8 +640,10 @@
 				06A4446E26E23F84005052AE /* Double+NSDecimalNumber.swift in Sources */,
 				3F844CE026E4F0A100208FC6 /* SplashScreenViewController.swift in Sources */,
 				0643CEED26D3B9FB000480BE /* UIView+SafeAnchors.swift in Sources */,
+				3FC724D526ED588800F1BF0D /* DSNColor.swift in Sources */,
 				3F59B53026E38A6200DE992A /* MainViewController+UITextFieldDelegate.swift in Sources */,
 				06434F1126D4CF6800CAAB7F /* SplitResult.swift in Sources */,
+				3FC724DB26EDFD3100F1BF0D /* SplashSceneViewContext.swift in Sources */,
 				06434F0326D4CD3800CAAB7F /* MainPresenter.swift in Sources */,
 				069C606626D3AE2400C9ED79 /* MainViewController.swift in Sources */,
 				3F844CFD26E53F0000208FC6 /* AssemblyLogic.swift in Sources */,
@@ -639,6 +658,7 @@
 				0666C21126E640AB0097877A /* SplashSceneInteractor.swift in Sources */,
 				0643CF7F26D3EBEC000480BE /* MainInteractor.swift in Sources */,
 				069C606426D3AE2400C9ED79 /* SceneDelegate.swift in Sources */,
+				3FC724D326ED584100F1BF0D /* DSNGradient.swift in Sources */,
 				3F844CF326E52ED500208FC6 /* SplashSceneAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

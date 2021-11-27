@@ -12,7 +12,10 @@ final class SplashSceneAssembler: AssemblyLogic {
 
 	/// Make function imp
 	func make() -> UIViewController {
-		let viewController = SplashScreenViewController()
+		let context = SplashSceneViewContext(
+			gradient: DSNGradient.color(.green).instance
+		)
+		let viewController = SplashScreenViewController(context: context)
 		return viewController
 	}
 }

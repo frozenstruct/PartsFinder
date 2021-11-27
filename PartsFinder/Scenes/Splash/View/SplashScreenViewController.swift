@@ -40,7 +40,22 @@ final class SplashScreenViewController: UIViewController {
 	}()
 
 	/// Gradient background
-	private var gradientLayer: CAGradientLayer?
+	private var gradientLayer: CAGradientLayer
+
+	// MARK: - Initialization
+
+	/// Instantiates a copy of the viewController
+	/// - Parameter gradientLayer: gradient to be applied on background
+	init(context: SplashSceneViewContext) {
+		self.gradientLayer = context.gradient
+		super.init(nibName: nil, bundle: nil)
+	}
+
+	/// Nominal imp
+	@available(*, unavailable)
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 
 	// MARK: - View Lifecycle
 
@@ -48,13 +63,13 @@ final class SplashScreenViewController: UIViewController {
 		super.viewDidLoad()
 		view.backgroundColor = .white
 
-		createBackdropGradient()
 		addSubviews()
 		constrainSubviews()
 	}
 
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
+		createBackdropGradient()
 		perform(#selector(presentMainScene), with: nil, afterDelay: 2.0)
 	}
 
@@ -86,19 +101,10 @@ final class SplashScreenViewController: UIViewController {
 
 	/// Sets up the gradient backdrop
 	private func createBackdropGradient() {
-		gradientLayer = CAGradientLayer()
-
-		guard let layer = gradientLayer else {
-			return
-		}
-
-		layer.frame = view.bounds
-		layer.colors = [
-			#colorLiteral(red: 0.3173888028, green: 0.7608219981, blue: 0.4352326393, alpha: 1).cgColor,
-			#colorLiteral(red: 0.9489449859, green: 0.9137673974, blue: 0.004057167098, alpha: 1).cgColor
-		]
-		layer.locations = [0, 1]
-		self.view.layer.insertSublayer(layer, at: 0)
+		view.layer.insertSublayer(
+			gradientLayer,
+			at: 0
+		)
 	}
 
 	/// Tells the coordinator to present the main scene

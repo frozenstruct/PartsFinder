@@ -100,6 +100,7 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 
 		addSubviews()
 		constrainSubviews()
+		createBackdropGradient()
 
 		view.backgroundColor = .white
 	}
@@ -174,5 +175,12 @@ class MainViewController: UIViewController, MainViewControllerInputProtocol {
 	/// Displays the result (imp)
 	func displayResult(_ numbers: SplitResult) {
 		outputLabel.text = "\(numbers.part0)," + " \(numbers.part1)"
+	}
+
+	/// Sets up the gradient backdrop
+	private func createBackdropGradient() {
+		DSNGradient.color(
+			.green
+		).onView(view)
 	}
 }
