@@ -1,15 +1,15 @@
 name: Swift
 
-### The job is performed when some substantial work is done to the app
-on: [ push ]
-  
+on: [push]
+
 jobs:
-  xcodebuild_remote:
+  build:
+
     runs-on: macos-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Install the Apple certificate and provisioning profile
         env:
           BUILD_CERTIFICATE_BASE64: ${{ secrets.PF_APPLEDEV_SIGNCERT }}
